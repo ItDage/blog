@@ -21,12 +21,13 @@ public class ArticleController {
     private ArticleService articleService;
 
     @RequestMapping("/get")
-    public Result getAll(){
-        List<Article> list = articleService.getAll();
+    public Result getAll(int page){
+        List<Article> list = articleService.getAll(page);
         Result result = new Result();
         result.setMsg("success");
         result.setCode(200);
         result.setData(list);
+        result.setData2(articleService.count() / Article + 1);
         return result;
     }
 }

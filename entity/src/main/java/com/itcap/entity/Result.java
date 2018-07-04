@@ -7,6 +7,15 @@ public class Result {
     private int code;
     private String msg;
     private Object data;
+    private Object data2;
+
+    public Object getData2() {
+        return data2;
+    }
+
+    public void setData2(Object data2) {
+        this.data2 = data2;
+    }
 
     public Object getData() {
         return data;

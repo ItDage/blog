@@ -11,6 +11,14 @@ public class BaseDoMain {
     private int page;//页数
     private int count;//每页数量
 
+    public String getDirection() {
+        return direction;
+    }
+
+    public void setDirection(String direction) {
+        this.direction = direction;
+    }
+
     public boolean isSort() {
         return sort;
     }

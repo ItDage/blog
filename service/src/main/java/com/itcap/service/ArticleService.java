@@ -20,12 +20,19 @@ public class ArticleService {
     @Autowired
     private ArticleMapper articleMapper;
 
-    public List<Article> getAll() {
-        PageHelper.startPage(1, 5);
-        List<Article> list = articleMapper.getAll();
-        PageInfo<Article> pageInfo2 = new PageInfo<>(list);
-        System.out.println(pageInfo2.toString());
+    public List<Article> getAll(int page) {
+        Article article = new Article();
+        article.setSort(true);
+        article.setDirection("desc");
+        article.setLimit(true);
+        article.setCount(10);
+        page = (page - 1) * article.getCount();
+        article.setPage(page);
+        article.setCount(10);
+        return articleMapper.getAll(article);
+    }
 
-        return articleMapper.getAll();
+    public int count(){
+        return articleMapper.count();
     }
 }

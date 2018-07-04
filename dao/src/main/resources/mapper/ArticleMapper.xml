@@ -18,9 +18,18 @@
         SELECT
         <include refid="Base_Column_List" />
         FROM article
-        order by publishDate DESC
-
+        <if test="#{sort == true and direction == 'desc'}">
+          order by publishDate DESC
+        </if>
+        <if test="#{limit == true}">
+             limit #{page}, #{count}
+        </if>
     </select>
+
+    <select id="count" resultType="int">
+        SELECT count(id) FROM article
+    </select>
+
 
     <!--<select id="getArticleByPageNum" parameterType="java.lang.Integer" resultType="com.cap.entity.Article" >-->
         <!--SELECT-->

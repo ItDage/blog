@@ -6,6 +6,9 @@ import java.util.Date;
  * Created by cmhy on 2018/7/4.
  */
 public class Article extends BaseDoMain{
+
+    private static final int COUNT = 10;
+
     private long id;//id
     private String title;//标题
     private String content;//内容
