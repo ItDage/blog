@@ -11,5 +11,14 @@
 
     <artifactId>entity</artifactId>
 
+    <dependencies>
+        <!-- mybatis分页插件 -->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
+            <version>5.1.2</version>
+        </dependency>
+
+    </dependencies>
 
 </project>

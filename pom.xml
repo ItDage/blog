@@ -13,6 +13,7 @@
         <module>service</module>
         <module>entity</module>
         <module>manage</module>
+        <module>dao</module>
     </modules>
 
     <parent>
@@ -81,30 +82,30 @@
     </dependencies>
 
     <build>
-        <plugins>
-            <plugin>
-                <!-- The plugin rewrites your manifest -->
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>1.3.0.RELEASE</version>
-                <configuration><!-- 指定该Main Class为全局的唯一入口 -->
-                    <!--<mainClass>com.itcap.AdminApplication</mainClass>-->
-                    <!--<mainClass>com.itcap.WebApplication</mainClass>-->
-                    <layout>ZIP</layout>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal><!--可以把依赖的包都打包到生成的Jar包中-->
-                        </goals>
-                        <!--可以生成不含依赖包的不可执行Jar包-->
-                        <!-- configuration>
-                          <classifier>exec</classifier>
-                        </configuration> -->
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
+        <!--<plugins>-->
+            <!--<plugin>-->
+                <!--&lt;!&ndash; The plugin rewrites your manifest &ndash;&gt;-->
+                <!--<groupId>org.springframework.boot</groupId>-->
+                <!--<artifactId>spring-boot-maven-plugin</artifactId>-->
+                <!--<version>1.3.0.RELEASE</version>-->
+                <!--<configuration>&lt;!&ndash; 指定该Main Class为全局的唯一入口 &ndash;&gt;-->
+                    <!--&lt;!&ndash;<mainClass>com.itcap.AdminApplication</mainClass>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<mainClass>com.itcap.WebApplication</mainClass>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<layout>ZIP</layout>&ndash;&gt;-->
+                <!--</configuration>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<goals>-->
+                            <!--<goal>repackage</goal>&lt;!&ndash;可以把依赖的包都打包到生成的Jar包中&ndash;&gt;-->
+                        <!--</goals>-->
+                        <!--&lt;!&ndash;可以生成不含依赖包的不可执行Jar包&ndash;&gt;-->
+                        <!--&lt;!&ndash; configuration>-->
+                          <!--<classifier>exec</classifier>-->
+                        <!--</configuration> &ndash;&gt;-->
+                    <!--</execution>-->
+                <!--</executions>-->
+            <!--</plugin>-->
+        <!--</plugins>-->
     </build>
 
 </project>

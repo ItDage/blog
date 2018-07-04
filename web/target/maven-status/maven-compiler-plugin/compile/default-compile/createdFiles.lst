@@ -1,2 +1,4 @@
-com\itcap\WebApplication.class
 com\itcap\controller\IndexController.class
+com\itcap\filter\CORSFilter.class
+com\itcap\WebApplication.class
+com\itcap\controller\ArticleController.class
