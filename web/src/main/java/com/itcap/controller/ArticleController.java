@@ -22,11 +22,11 @@ public class ArticleController {
 
     @RequestMapping("/get")
     public Result getAll(int page){
-        List<Article> list = articleService.getAll(page);
         Result result = new Result();
         result.setMsg("success");
         result.setCode(200);
-        result.setData(list);
+        result.setData(articleService.getAll(page));
+        //总页数
         result.setData2(articleService.count() / Article.COUNT + 1);
         return result;
     }

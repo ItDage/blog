@@ -18,9 +18,12 @@
         SELECT
         <include refid="Base_Column_List" />
         FROM article
-        <if test="#{sort == true and direction == 'desc'}">
+        <if test="#{direction == 'desc'}">
           order by publishDate DESC
         </if>
+        <!--<if test="#{direction == 'asc'}">-->
+            <!--order by publishDate ASC-->
+        <!--</if>-->
         <if test="#{limit == true}">
              limit #{page}, #{count}
         </if>

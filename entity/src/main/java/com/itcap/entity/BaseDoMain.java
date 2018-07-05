@@ -5,7 +5,7 @@ package com.itcap.entity;
  */
 public class BaseDoMain {
 
-    private boolean sort;//是否排序
+//    private boolean sort;//是否排序
     private String direction;//排序方向
     private boolean limit;//是否分页
     private int page;//页数
@@ -19,13 +19,13 @@ public class BaseDoMain {
         this.direction = direction;
     }
 
-    public boolean isSort() {
-        return sort;
-    }
-
-    public void setSort(boolean sort) {
-        this.sort = sort;
-    }
+//    public boolean isSort() {
+//        return sort;
+//    }
+//
+//    public void setSort(boolean sort) {
+//        this.sort = sort;
+//    }
 
     public boolean isLimit() {
         return limit;

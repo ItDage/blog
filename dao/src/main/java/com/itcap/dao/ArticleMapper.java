@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 @Mapper
 public interface ArticleMapper {
 
-    public List<Article> getAll(Article article);
+    List<Article> getAll(Article article);
 
-    public int count();
+    int count();
 }

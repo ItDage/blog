@@ -2,6 +2,8 @@ package com.itcap.entity;
 
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 /**
  * Created by cmhy on 2018/7/4.
  */
@@ -12,6 +14,7 @@ public class Article extends BaseDoMain{
     private long id;//id
     private String title;//标题
     private String content;//内容
+    @JsonFormat(timezone = "GMT+8", pattern = "yyyy-MM-dd HH:mm")
     private Date publishDate;//发布时间
     private int viewCount;//浏览量
     private String author;//作者
@@ -81,4 +84,7 @@ public class Article extends BaseDoMain{
     public void setViewCount(int viewCount) {
         this.viewCount = viewCount;
     }
+
 }
+
+
