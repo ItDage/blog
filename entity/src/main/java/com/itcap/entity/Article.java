@@ -7,7 +7,7 @@ import java.util.Date;
  */
 public class Article extends BaseDoMain{
 
-    private static final int COUNT = 10;
+    public static final int COUNT = 10;
 
     private long id;//id
     private String title;//标题

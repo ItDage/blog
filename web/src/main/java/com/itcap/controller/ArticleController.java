@@ -27,7 +27,7 @@ public class ArticleController {
         result.setMsg("success");
         result.setCode(200);
         result.setData(list);
-        result.setData2(articleService.count() / Article + 1);
+        result.setData2(articleService.count() / Article.COUNT + 1);
         return result;
     }
 }

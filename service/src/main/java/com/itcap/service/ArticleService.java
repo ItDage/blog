@@ -25,8 +25,8 @@ public class ArticleService {
         article.setSort(true);
         article.setDirection("desc");
         article.setLimit(true);
-        article.setCount(10);
-        page = (page - 1) * article.getCount();
+        article.setCount(Article.COUNT);
+        page = (page - 1) * Article.COUNT;
         article.setPage(page);
         article.setCount(10);
         return articleMapper.getAll(article);
