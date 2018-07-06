@@ -27,7 +27,7 @@ public class ArticleController {
         result.setCode(200);
         result.setData(articleService.getAll(page));
         //总页数
-        result.setData2(articleService.count() / Article.COUNT + 1);
+        result.setData2(articleService.count());
         return result;
     }
 }
